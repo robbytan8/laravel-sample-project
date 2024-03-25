@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FamilyCardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,9 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('index', function () {
-    return view('index');
-})->name('route-index');
-Route::get('about', function () {
-    return view('about');
-})->name('route-about');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
+Route::get('/fc', [FamilyCardController::class, 'index'])->name('fc-view');
+Route::get('/fc-create', [FamilyCardController::class, 'create'])->name('fc-create');
+Route::post('/fc-create', [FamilyCardController::class, 'store'])->name('fc-store');
