@@ -7,6 +7,7 @@ This project is a sample web application framework using Laravel. You can find s
 Code covered in this repository
 
 - main branch (master): basic view and route (simple navigation)
+- branch 01-laravel_data_from_route_and_controller: Send data from route or controller and display it on view
 
 Laravel Tutorial: [Laravel in Roemah Rotan](https://www.youtube.com/playlist?list=PLdmJps-of11t4pFewpSlpiDyiwCXc5Z0h)
 

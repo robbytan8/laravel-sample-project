@@ -8,8 +8,7 @@
     <title>Laravel Sample Project</title>
 </head>
 <body>
-<h1>About Page</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ducimus quaerat sed. A ab architecto cupiditate dolor, error esse illum incidunt molestiae nemo nobis nostrum quas quo ullam veniam vero!</p>
+<h1>Data 1 Page</h1>
 <nav>
     <ul>
         <li><a href="{{ route('route-index') }}">Index</a></li>
@@ -18,5 +17,12 @@
         <li><a href="{{ route('route-about') }}">About</a></li>
     </ul>
 </nav>
+<p>Category Data from route: {{ $category }}</p>
+<p>Items Data from route</p>
+<ol>
+    @foreach($items as $item)
+        <li>{{ $item }}</li>
+    @endforeach
+</ol>
 </body>
 </html>

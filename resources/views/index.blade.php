@@ -13,6 +13,8 @@
 <nav>
     <ul>
         <li><a href="{{ route('route-index') }}">Index</a></li>
+        <li><a href="{{ route('route-data1') }}">Data 1</a></li>
+        <li><a href="{{ route('route-data2') }}">Data 2</a></li>
         <li><a href="{{ route('route-about') }}">About</a></li>
     </ul>
 </nav>

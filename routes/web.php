@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Data2Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,14 @@ Route::get('index', function () {
 Route::get('about', function () {
     return view('about');
 })->name('route-about');
+Route::get('data1', function () {
+    return view('data1', [
+        'category'=> 'History',
+        'items' => [
+            'T-Rex fossil',
+            'Coliseum miniature',
+            'Alexander "The Great" Sword',
+        ]
+    ]);
+})->name('route-data1');
+Route::get('data2', [Data2Controller::class, 'index'])->name('route-data2');
